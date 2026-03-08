@@ -1,0 +1,42 @@
+# HP Stock Assistant 配置文件
+
+# 关注的股票列表
+stocks:
+  - code: "300502"
+    name: "新易盛"
+    market: "A股"
+  - code: "002384"
+    name: "东山精密"
+    market: "A股"
+  - code: "301208"
+    name: "侨源股份"
+    market: "A股"
+  - code: "688501"
+    name: "景业智能"
+    market: "A股"
+  - code: "300593"
+    name: "新雷能"
+    market: "A股"
+
+# 邮件配置
+email:
+  smtp_server: "smtp.qq.com"
+  smtp_port: 587
+
+# 发送时间（北京时间）
+# 20:00 表示晚上8点
+send_time: "20:00"
+
+# 分析参数
+analysis:
+  # 欧奈尔参数
+  oneil:
+    rps_periods: [3, 6, 12]  # RS评分周期（月）
+    rps_weights: [0.4, 0.2, 0.4]  # RS评分权重
+    min_rps: 80  # 最小RS评分
+    volume_multiplier: 1.4  # 成交量倍数
+
+  # 缠论参数
+  chanlun:
+    min_stroke_bars: 5  # 笔的最少K线数
+    include_handling: true  # 是否处理包含关系
